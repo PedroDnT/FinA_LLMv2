@@ -1,4 +1,4 @@
-Sure, here's the revised version of your README file:
+
 
 ---
 
@@ -34,8 +34,6 @@ Run the analysis scripts as required to replicate the study.
 
 ## Contributions
 
-Contributions are welcome! Please refer to the contribution guidelines in the repository.
+Contributions are welcome!
 
 ---
-
-Feel free to make further adjustments if needed!
