@@ -1,27 +1,41 @@
-# Project Title 
-A brief description of your project.
+Sure, here's the revised version of your README file:
 
-## Getting Started
-Instructions on how to get a copy of the project up and running on your local machine.
+---
 
-### Prerequisites
-List any software, libraries, or hardware needed to run this project.
- Lists : 
- - **List 1** : some description
- - **List 2** : some description
+# FinA_LLMv2
 
+## Overview
 
-### Installing
-A step-by-step guide on how to install the project.
+FinA_LLMv2 is a project aimed at replicating the methodology used in the paper **Financial Analysis with LLM**. The full paper is available in the `Papers` directory. This repository focuses on applying the methodology specifically to Brazilian public companies, aiming to replicate and validate the study’s findings.
 
-## Usage
-Instructions on how to use the project or its features.
+## Data Sources
 
-## Contributing
-Guidelines on how to contribute to the project.
+The data used in this project comes from official Brazilian regulatory sources, ensuring accuracy and reliability in the analysis of financial statements of Brazilian public companies.
 
-## License
-This project is licensed under the [License Name] - see the [LICENSE.md](LICENSE.md) file for details.
+## Directory Structure
 
-## Acknowledgments
-Mention anyone who contributed to the project or inspired you. 
+- **.vscode/**: Configuration files for Visual Studio Code.
+- **ids/**: Contains identifier files for the data sources.
+- **paper/**: Includes the main paper and related documentation.
+- **scripts/**: Scripts for data processing and analysis.
+- **Pipfile**: Python environment configuration.
+- **pyproject.toml**: Build system requirements.
+
+## Setup and Usage
+
+To set up the environment, use the following commands:
+
+```sh
+pip install pipenv
+pipenv install
+```
+
+Run the analysis scripts as required to replicate the study.
+
+## Contributions
+
+Contributions are welcome! Please refer to the contribution guidelines in the repository.
+
+---
+
+Feel free to make further adjustments if needed!
