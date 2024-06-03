@@ -10,7 +10,8 @@ import os
 import dontshareconfig as d
 
 # Set your API key
-openai.api_key = d.key
+dados_de_mercado_api_key = d.DDM_KEY
+openai.api_key = d.OPENAI_KEY
 
 
 def preprocess_data(income_statement, balance_sheet):
@@ -93,17 +94,23 @@ def analyze_financial_statements():
             income_statement = pd.read_csv(os.path.join(raw_data_path, f'{cvm_code}_income_statement.csv'))
 
             data = preprocess_data(income_statement, balance_sheet)
-
-            for index, row in data.iterrows():
-                if index < len(data) - 1:
-                    prompt = generate_cot_steps(row)
-                    prediction = call_gpt4_cot(prompt)
-                    results.append({
-                        'cvm_code': row['cvm_code'],
-                        'current_period': row['period_end'],
-                        'prediction': prediction
-                    })
-    
+            for year in range(int(year), int(year+1)):
+                data = data[data['period_end'] == f'year_{year}']
+                if len(data) == 0:
+                    continue
+                print(f"Analyzing financial statements for {cvm_code} for year {year}")
+                cot_result = call_gpt4_cot(generate_cot_steps(data.iloc[0]))
+                results.append({
+                    'cvm_code': cvm_code,
+                    'current_period': f'year_{year}',
+                    'prediction': cot_result,
+                    'prompt': generate_cot_steps(data.iloc[0]),
+                    'prompt_id': cvm_code + '_' + str(year),
+                    'data': data.to_dict(orient='records')[0]
+                })
+                print(f"Completed financial statement analysis for {cvm_code} for year {year}")
+                print("-----------------------------------------")
+                
     results_df = pd.DataFrame(results)
     results_df.to_csv(os.path.join(results_path, 'financial_statement_analysis_results.csv'), index=False)
 

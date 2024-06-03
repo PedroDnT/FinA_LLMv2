@@ -4,9 +4,10 @@ import requests
 import pandas as pd
 import os
 import dontshareconfig as d
-
+import openai
 # Set your API keys
 dados_de_mercado_api_key = d.DDM_KEY
+openai.api_key = d.OPENAI_KEY
 
 # Define headers for Dados de Mercado API
 headers = {

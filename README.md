@@ -12,6 +12,10 @@ FinA_LLMv2 is a project aimed at replicating the methodology used in the paper *
 
 The data used in this project comes from official Brazilian regulatory sources, ensuring accuracy and reliability in the analysis of financial statements of Brazilian public companies.
 
+### 
+- **Brazilian Companies Financial Statments**: https://www.dadosdemercado.com.br/api/docs
+- **LLM Model**: https://platform.openai.com/docs/
+
 ## Directory Structure
 
 - **.vscode/**: Configuration files for Visual Studio Code.
@@ -28,6 +32,7 @@ To set up the environment, use the following commands:
 ```sh
 pip install pipenv
 pipenv install
+python3 scripts/main.py
 ```
 
 Run the analysis scripts as required to replicate the study.
@@ -36,4 +41,5 @@ Run the analysis scripts as required to replicate the study.
 
 Contributions are welcome!
 
+---
 ---
