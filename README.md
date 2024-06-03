@@ -1,27 +1,46 @@
-# Project Title 
-A brief description of your project.
-
-## Getting Started
-Instructions on how to get a copy of the project up and running on your local machine.
-
-### Prerequisites
-List any software, libraries, or hardware needed to run this project.
- Lists : 
- - **List 1** : some description
- - **List 2** : some description
 
 
-### Installing
-A step-by-step guide on how to install the project.
+---
 
-## Usage
-Instructions on how to use the project or its features.
+# FinA_LLMv2
 
-## Contributing
-Guidelines on how to contribute to the project.
+ ! Work in progress
 
-## License
-This project is licensed under the [License Name] - see the [LICENSE.md](LICENSE.md) file for details.
+## Overview
 
-## Acknowledgments
-Mention anyone who contributed to the project or inspired you. 
+FinA_LLMv2 is a project aimed at replicating the methodology used in the paper **Financial Analysis with LLM**. The full paper is available in the `Papers` directory. This repository focuses on applying the methodology specifically to Brazilian public companies, aiming to replicate and validate the study’s findings.
+
+## Data Sources
+
+The data used in this project comes from official Brazilian regulatory sources, ensuring accuracy and reliability in the analysis of financial statements of Brazilian public companies.
+
+### 
+- **Brazilian Companies Financial Statments**: https://www.dadosdemercado.com.br/api/docs
+- **LLM Model**: https://platform.openai.com/docs/
+
+## Directory Structure
+
+- **.vscode/**: Configuration files for Visual Studio Code.
+- **ids/**: Contains identifier files for the data sources.
+- **paper/**: Includes the main paper and related documentation.
+- **scripts/**: Scripts for data processing and analysis.
+- **Pipfile**: Python environment configuration.
+- **pyproject.toml**: Build system requirements.
+
+## Setup and Usage
+
+To set up the environment, use the following commands:
+
+```sh
+pip install pipenv
+pipenv install
+python3 scripts/main.py
+```
+
+Run the analysis scripts as required to replicate the study.
+
+## Contributions
+
+Contributions are welcome!
+
+---
