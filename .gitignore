@@ -1,3 +1,6 @@
 CMS/dontshareconfigCMS.py
 dontshareconfig.py
 dontshareconfigCMS.py
+.DS_Store
+Pipfile
+data_sync.py

@@ -1,4 +1,14 @@
 import pandas as pd
+"""
+    The script fetches financial data from an API, stores it in a PostgreSQL database after processing,
+    and ensures data integrity by handling invalid entries.
+    :return: The code provided is a Python script that performs the following tasks:
+    1. Establishes a connection to a PostgreSQL database using psycopg2.
+    2. Fetches unique CVM codes from a CSV file and checks for invalid entries in a specified table in
+    the database.
+    3. Inserts data into a specified table in the database and handles financial data for companies by
+    fetching data from an external API (Dados de Merc
+"""
 import requests
 import logging
 import time
