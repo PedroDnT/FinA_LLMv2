@@ -49,8 +49,7 @@ DB_PORT =
 DB_NAME = 
 
 # Dados de Mercado API key
-DDM_KEY = '3925e42d5bff04855126b2c89f998671'
-
+DDM_KEY = 
 ```
 # Running
 The provided code snippet is instructing you to run the datasync script to populate a PostgreSQL database with financial data fetched from an external API (Dados de Mercado). Here is a breakdown of what the script does:
